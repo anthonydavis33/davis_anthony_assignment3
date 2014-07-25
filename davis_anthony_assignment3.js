@@ -6,14 +6,45 @@
 
 // Global Variables
 var myName = "John",
-    cleaningBool = 1
+    hasLice = true,
+    cleaningCert = false,
+    dragonName = "none"
 ;
+
+var dragonNames = [
+    "Puff",
+    "Draco",
+    "Igneel",
+    "Falkor"
+];
 
 
 
 
 
 // Boolean Function
+var cleaningFunction = function (hasLice, myName) {
+    var delousing;
+    var cnt = 1;
+
+    if (hasLice === true) {
+        console.log("You may not enter into the daycare unless you have deloused him/her properly.");
+    };
+    while (hasLice === true) {
+        delousing = confirm("Have you properly deloused " + dragonName + " yet?");
+        hasLice = !delousing;
+    };
+
+    console.log(myName + " Has entered Dragon Daycare!");
+    return hasLice;
+};
+
+// Array Function
+var dragonArray = function (dragonNames){
+    
+};
+
+// Number Function
 var cleaningFunction = function (cleaningBool, myName) {
     var dragonsWashed = 11;
     var cnt = 1;
@@ -27,14 +58,11 @@ var cleaningFunction = function (cleaningBool, myName) {
     };
 
     console.log(myName + " Has completed Dragon Cleaning!");
-    return cleaningBool;
+    
 };
 
-// Array Function
-
-// Number Function
-
 // String Function
+
 
 console.log("My name is Miss Johns of Johnsville, Lead Dragon Daycare Specialist.");
 
@@ -47,6 +75,8 @@ if (myName === "John") {
     console.log(myName + " isn't a very respectable name around here.");
 };
 
+// Naming your dragon
+dragonName = prompt("What is the name of your Dragon?", "Think of a fun one!");
 
 cleaningFunction(cleaningBool, myName);
 console.log("--------------");
